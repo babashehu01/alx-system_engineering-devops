@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#script that prints using while loop with a condition
+i=0
+while [ "$i" -lt 10 ]
+do
+	if [ "$i" = 9 ];
+	then
+		echo "Hi"
+		echo "Best School"
+	else
+		echo "Best School"
+	fi
+	((i++))
+done
+
