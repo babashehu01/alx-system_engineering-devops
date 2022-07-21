@@ -8,7 +8,7 @@ if [ -e "$FILE" ];
 then
 	echo "school file exists"
 	#if the file is not empty
-	if [ -s "$FILE"];
+	if [ -s "$FILE" ];
 	then
 		echo "school file is not empty"
 		#if the file is regular
