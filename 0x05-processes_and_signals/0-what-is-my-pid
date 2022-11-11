@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script displays process id of the shell it's running
+echo $$
