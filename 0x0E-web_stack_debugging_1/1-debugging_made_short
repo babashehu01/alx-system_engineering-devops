@@ -2,4 +2,4 @@
 # Shorter version of task 1
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
-pkill -1 nginx
+kill -9 "$(cat /run/nginx.pid)"
