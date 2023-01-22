@@ -1,3 +1,5 @@
+# Adds custom header to nginx
+
 exec { 'apt-get update':
    provider => shell,
    command  => 'sudo apt-get -y update',
