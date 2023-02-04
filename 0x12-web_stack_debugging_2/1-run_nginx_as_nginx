@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Stop Nginx service if running
+systemctl stop nginx
+
+# Update Nginx configuration to listen on all active IPs on port 8080
+echo "server {
+  listen 8080;
+  server_name _;
+  root /var/www/html;
+  index index.html;
+  user nginx;
+  location / {
+    try_files \$uri \$uri/ /index.html;
+  }
+}" > /etc/nginx/conf.d/default.conf
+
+# Update Nginx user in the Nginx service file
+sed -i "s/user www-data/user nginx/g" /etc/systemd/system/multi-user.target.wants/nginx.service
+
+# Start Nginx service as the nginx user
+systemctl start nginx
