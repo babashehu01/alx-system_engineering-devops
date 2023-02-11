@@ -3,7 +3,6 @@
 import requests
 import sys
 
-
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
     user_id = int(sys.argv[1])
@@ -23,7 +22,7 @@ if __name__ == "__main__":
     for task in tasks:
         if task['completed'] is True:
             task_list.append(task)
-    
+
     print("({}/{}):".format(len(task_list), len(tasks)))
 
     """Printing the title of each completed task"""
