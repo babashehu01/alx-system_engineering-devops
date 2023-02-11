@@ -12,7 +12,7 @@ if __name__ == "__main__":
     response = requests.get(user)
     to_obj = response.json()
 
-    print("Employee {} is done with tasks ".format(to_obj['name']), end='')
+    print("Employee {} is done with tasks".format(to_obj['name']), end='')
 
     """Getting task done by employee"""
     todos = '{}todos?userId={}'.format(url, user_id)
