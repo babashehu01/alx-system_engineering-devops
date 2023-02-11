@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Getting website data using API and save it as CSV
 """
-
 import requests
 import sys
 
